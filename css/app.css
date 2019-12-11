@@ -17,7 +17,6 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/halftone-yellow.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -26,6 +25,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #FF512F;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FF9966, #B7504C);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FF9966, #B7504C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
@@ -38,12 +40,10 @@ h1 {
  */
 
 .deck {
+	background: #ffffff url('../img/checkerboard-cross.png'); /* Background pattern from Subtle Patterns */
     max-width: 660px;
     min-height: 680px;
 	/* imported background gradient from uigradients */
-	background: #FF512F;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -57,7 +57,7 @@ h1 {
 .deck .card {
     height: 125px;
     width: 125px;
-    background: #eac95b;
+    background: #FF9966;
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
@@ -70,7 +70,7 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #ff3255;
+    background: #B7504C;
     cursor: default;
 }
 
@@ -80,7 +80,7 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #eac233;
+    background: #ffc858;
     font-size: 33px;
 }
 
@@ -142,6 +142,7 @@ h1 {
 	position: relative;
 	transition: all 5s ease-in-out;
 	font-family: 'Coda', cursive;
+	text-align: center;
 }
 
 #starsScore li{
